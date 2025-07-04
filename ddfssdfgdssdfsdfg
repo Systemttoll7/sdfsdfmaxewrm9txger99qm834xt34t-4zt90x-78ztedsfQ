@@ -557,7 +557,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				SetProps(MakeElement("Image", "https://www.roblox.com/headshot-thumbnail/image?userId=".. LocalPlayer.UserId .."&width=420&height=420&format=png"), {
 					Size = UDim2.new(1, 0, 1, 0)
 				}),
-				AddThemeObject(SetProps(MakeElement("Image", "https://cdn.discordapp.com/attachments/1356679622988927250/1390817411015639050/4482C0DF-4367-4D9D-A435-D2BB10C8D252.jpg?ex=6869a326&is=686851a6&hm=e90455d9b822a96128b7967a3f388f8f7988f4d3f5938078a6b404e2a5c75e05&"), {
+				AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://120158859345590"), {
 					Size = UDim2.new(1, 0, 1, 0),
 				}), "Second"),
 				MakeElement("Corner", 1)
@@ -576,7 +576,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				Font = Enum.Font.GothamBold,
 				ClipsDescendants = true
 			}), "Text"),
-			AddThemeObject(SetProps(MakeElement("Label", "The Future of Free", 12), {
+			AddThemeObject(SetProps(MakeElement("Label", "Future of Free", 12), {
 				Size = UDim2.new(1, -60, 0, 12),
 				Position = UDim2.new(0, 50, 1, -25),
 				Visible = not WindowConfig.HidePremium
