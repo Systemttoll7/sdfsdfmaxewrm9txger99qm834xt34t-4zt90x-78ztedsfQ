@@ -477,8 +477,8 @@ function OrionLib:MakeWindow(WindowConfig)
 	WindowConfig.IntroText = WindowConfig.IntroText or "Starting Vortex"
 	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
 	WindowConfig.ShowIcon = WindowConfig.ShowIcon or false
-	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://71494616010687"
-	WindowConfig.IntroIcon = WindowConfig.IntroIcon or "rbxassetid://71494616010687"
+	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://108992388891490"
+	WindowConfig.IntroIcon = WindowConfig.IntroIcon or "rbxassetid://108992388891490"
 	OrionLib.Folder = WindowConfig.ConfigFolder
 	OrionLib.SaveCfg = WindowConfig.SaveConfig
 
