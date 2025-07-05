@@ -557,7 +557,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				SetProps(MakeElement("Image", "https://www.roblox.com/headshot-thumbnail/image?userId=".. LocalPlayer.UserId .."&width=420&height=420&format=png"), {
 					Size = UDim2.new(1, 0, 1, 0)
 				}),
-				AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://120158859345590"), {
+				AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://108992388891490"), {
 					Size = UDim2.new(1, 0, 1, 0),
 				}), "Second"),
 				MakeElement("Corner", 1)
