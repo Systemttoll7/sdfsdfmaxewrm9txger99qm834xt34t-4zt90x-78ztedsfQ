@@ -38,7 +38,7 @@ end
 ]]
 
 getgenv().gethui = function() 
-  return game.CoreGui 
+	return game.CoreGui 
 end
 
 local function GetIcon(IconName)
@@ -771,8 +771,8 @@ function OrionLib:MakeWindow(WindowConfig)
 			Container.Visible = true
 
 			-- ➕ Farbe ändern
-			TabFrame.Title.TextColor3 = Color3.fromRGB(255, 120, 0) -- Deine Wunschfarbe
-			TabFrame.Ico.ImageColor3 = Color3.fromRGB(255, 120, 0)
+			TabFrame.Title.TextColor3 = Color3.fromRGB(65, 188, 255) -- Deine Wunschfarbe
+			TabFrame.Ico.ImageColor3 = Color3.fromRGB(65, 188, 255)
 		end    
 
 		AddConnection(TabFrame.MouseButton1Click, function()
@@ -794,9 +794,9 @@ function OrionLib:MakeWindow(WindowConfig)
 			TweenService:Create(TabFrame.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
 			TabFrame.Title.Font = Enum.Font.GothamBlack
 			Container.Visible = true   
-			
-			TabFrame.Title.TextColor3 = Color3.fromRGB(255, 120, 0)
-			TabFrame.Ico.ImageColor3 = Color3.fromRGB(255, 120, 0)
+
+			TabFrame.Title.TextColor3 = Color3.fromRGB(65, 188, 255)
+			TabFrame.Ico.ImageColor3 = Color3.fromRGB(65, 188, 255)
 		end)
 
 		local function GetElements(ItemParent)
@@ -1064,18 +1064,18 @@ function OrionLib:MakeWindow(WindowConfig)
 						Dragging = true
 					end
 				end
-				
+
 				local function EndDrag(Input)
 					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
-					    	Dragging = false
+						Dragging = false
 					end
 				end
-				
+
 				local function UpdateDrag(Input)
 					if Dragging and (Input.UserInputType == Enum.UserInputType.MouseMovement or Input.UserInputType == Enum.UserInputType.Touch) then
 						local SizeScale = math.clamp((Input.Position.X - SliderBar.AbsolutePosition.X) / SliderBar.AbsoluteSize.X, 0, 1)
-					    	Slider:Set(SliderConfig.Min + ((SliderConfig.Max - SliderConfig.Min) * SizeScale))
-					    	SaveCfg(game.GameId)
+						Slider:Set(SliderConfig.Min + ((SliderConfig.Max - SliderConfig.Min) * SizeScale))
+						SaveCfg(game.GameId)
 					end
 				end
 
@@ -1090,7 +1090,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				SliderBar.InputBegan:Connect(BeginDrag)
 				SliderBar.InputEnded:Connect(EndDrag)
 				UserInputService.InputChanged:Connect(UpdateDrag)
-						
+
 				Slider:Set(Slider.Value)
 				if SliderConfig.Flag then				
 					OrionLib.Flags[SliderConfig.Flag] = Slider
@@ -1720,9 +1720,9 @@ function OrionLib:MakeWindow(WindowConfig)
 		end
 		return ElementFunction   
 	end 
-	
 
-	
+
+
 	return TabFunction
 end   
 
