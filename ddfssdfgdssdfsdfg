@@ -584,15 +584,12 @@ function OrionLib:MakeWindow(WindowConfig)
 		}),
 	}), "Second")
 
-	local WindowName = SetProps(MakeElement("Label", WindowConfig.Name, 14), {
+	local WindowName = AddThemeObject(SetProps(MakeElement("Label", WindowConfig.Name, 14), {
 		Size = UDim2.new(1, -30, 2, 0),
 		Position = UDim2.new(0, 25, 0, -24),
 		Font = Enum.Font.GothamBlack,
-		TextSize = 20,
-		TextColor3 = Color3.fromRGB(9, 99, 195) -- z.B. ein kräftiges Blau
-	})
-	WindowName.Parent = MainWindow.TopBar
-
+		TextSize = 20
+	}), "Text")
 
 	local WindowTopBarLine = AddThemeObject(SetProps(MakeElement("Frame"), {
 		Size = UDim2.new(1, 0, 0, 1),
@@ -774,8 +771,8 @@ function OrionLib:MakeWindow(WindowConfig)
 			Container.Visible = true
 
 			-- ➕ Farbe ändern
-			TabFrame.Title.TextColor3 = Color3.fromRGB(9, 99, 195) -- Deine Wunschfarbe
-			TabFrame.Ico.ImageColor3 = Color3.fromRGB(9, 99, 195)
+			TabFrame.Title.TextColor3 = Color3.fromRGB(61, 132, 208) -- Deine Wunschfarbe
+			TabFrame.Ico.ImageColor3 = Color3.fromRGB(61, 132, 208)
 		end    
 
 		AddConnection(TabFrame.MouseButton1Click, function()
@@ -798,8 +795,8 @@ function OrionLib:MakeWindow(WindowConfig)
 			TabFrame.Title.Font = Enum.Font.GothamBlack
 			Container.Visible = true   
 
-			TabFrame.Title.TextColor3 = Color3.fromRGB(9, 99, 195)
-			TabFrame.Ico.ImageColor3 = Color3.fromRGB(9, 99, 195)
+			TabFrame.Title.TextColor3 = Color3.fromRGB(61, 132, 208)
+			TabFrame.Ico.ImageColor3 = Color3.fromRGB(61, 132, 208)
 		end)
 
 		local function GetElements(ItemParent)
