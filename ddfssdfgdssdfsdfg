@@ -635,8 +635,8 @@ function OrionLib:MakeWindow(WindowConfig)
 	if WindowConfig.ShowIcon then
 		WindowName.Position = UDim2.new(0, 50, 0, -24)
 		local WindowIcon = SetProps(MakeElement("Image", WindowConfig.Icon), {
-			Size = UDim2.new(0, 20, 0, 20),
-			Position = UDim2.new(0, 25, 0, 16)
+			Size = UDim2.new(0, 22, 0, 22),
+			Position = UDim2.new(0, 25, 0, 17)
 		})
 		WindowIcon.Parent = MainWindow.TopBar
 	end	
