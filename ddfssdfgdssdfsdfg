@@ -769,15 +769,21 @@ function OrionLib:MakeWindow(WindowConfig)
 			TabFrame.Title.TextTransparency = 0
 			TabFrame.Title.Font = Enum.Font.GothamBlack
 			Container.Visible = true
+
+			-- ➕ Farbe ändern
+			TabFrame.Title.TextColor3 = Color3.fromRGB(255, 120, 0) -- Deine Wunschfarbe
+			TabFrame.Ico.ImageColor3 = Color3.fromRGB(255, 120, 0)
 		end    
 
 		AddConnection(TabFrame.MouseButton1Click, function()
 			for _, Tab in next, TabHolder:GetChildren() do
 				if Tab:IsA("TextButton") then
 					Tab.Title.Font = Enum.Font.GothamSemibold
+					Tab.Title.TextColor3 = OrionLib.Themes[OrionLib.SelectedTheme].Text
+					Tab.Ico.ImageColor3 = OrionLib.Themes[OrionLib.SelectedTheme].TextDark
 					TweenService:Create(Tab.Ico, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0.4}):Play()
 					TweenService:Create(Tab.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency = 0.4}):Play()
-				end    
+				end
 			end
 			for _, ItemContainer in next, MainWindow:GetChildren() do
 				if ItemContainer.Name == "ItemContainer" then
@@ -788,6 +794,9 @@ function OrionLib:MakeWindow(WindowConfig)
 			TweenService:Create(TabFrame.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
 			TabFrame.Title.Font = Enum.Font.GothamBlack
 			Container.Visible = true   
+			
+			TabFrame.Title.TextColor3 = Color3.fromRGB(255, 120, 0)
+			TabFrame.Ico.ImageColor3 = Color3.fromRGB(255, 120, 0)
 		end)
 
 		local function GetElements(ItemParent)
